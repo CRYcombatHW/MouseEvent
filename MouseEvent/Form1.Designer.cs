@@ -25,12 +25,80 @@
 		///  the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+			label1 = new Label();
+			labelXText = new Label();
+			labelYText = new Label();
+			labelXValue = new Label();
+			labelYvalue = new Label();
+			SuspendLayout();
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Location = new Point(12, 9);
+			label1.Name = "label1";
+			label1.Size = new Size(65, 15);
+			label1.TabIndex = 0;
+			label1.Text = "Mouse Pos";
+			// 
+			// labelXText
+			// 
+			labelXText.AutoSize = true;
+			labelXText.Location = new Point(12, 34);
+			labelXText.Name = "labelXText";
+			labelXText.Size = new Size(17, 15);
+			labelXText.TabIndex = 1;
+			labelXText.Text = "X:";
+			// 
+			// labelYText
+			// 
+			labelYText.AutoSize = true;
+			labelYText.Location = new Point(12, 49);
+			labelYText.Name = "labelYText";
+			labelYText.Size = new Size(17, 15);
+			labelYText.TabIndex = 2;
+			labelYText.Text = "Y:";
+			// 
+			// labelXValue
+			// 
+			labelXValue.AutoSize = true;
+			labelXValue.Location = new Point(39, 34);
+			labelXValue.Name = "labelXValue";
+			labelXValue.Size = new Size(0, 15);
+			labelXValue.TabIndex = 3;
+			// 
+			// labelYvalue
+			// 
+			labelYvalue.AutoSize = true;
+			labelYvalue.Location = new Point(39, 49);
+			labelYvalue.Name = "labelYvalue";
+			labelYvalue.Size = new Size(0, 15);
+			labelYvalue.TabIndex = 4;
+			// 
+			// Form1
+			// 
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(244, 146);
+			Controls.Add(labelYvalue);
+			Controls.Add(labelXValue);
+			Controls.Add(labelYText);
+			Controls.Add(labelXText);
+			Controls.Add(label1);
+			Name = "Form1";
+			Text = "Form1";
+			MouseClick += Form1_MouseClick;
+			MouseMove += Form1_MouseMove;
+			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
+
+		private Label label1;
+		private Label labelXText;
+		private Label labelYText;
+		private Label labelXValue;
+		private Label labelYvalue;
 	}
 }
