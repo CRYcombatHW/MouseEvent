@@ -30,6 +30,9 @@
 			labelYText = new Label();
 			labelXValue = new Label();
 			labelYvalue = new Label();
+			numericUpDown1 = new NumericUpDown();
+			label2 = new Label();
+			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -75,11 +78,32 @@
 			labelYvalue.Size = new Size(0, 15);
 			labelYvalue.TabIndex = 4;
 			// 
+			// numericUpDown1
+			// 
+			numericUpDown1.Location = new Point(12, 105);
+			numericUpDown1.Maximum = new decimal(new int[] { 42, 0, 0, 0 });
+			numericUpDown1.Minimum = new decimal(new int[] { 8, 0, 0, 0 });
+			numericUpDown1.Name = "numericUpDown1";
+			numericUpDown1.Size = new Size(45, 23);
+			numericUpDown1.TabIndex = 5;
+			numericUpDown1.Value = new decimal(new int[] { 8, 0, 0, 0 });
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Location = new Point(12, 87);
+			label2.Name = "label2";
+			label2.Size = new Size(68, 15);
+			label2.TabIndex = 6;
+			label2.Text = "Figures Size";
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(244, 146);
+			ClientSize = new Size(929, 506);
+			Controls.Add(label2);
+			Controls.Add(numericUpDown1);
 			Controls.Add(labelYvalue);
 			Controls.Add(labelXValue);
 			Controls.Add(labelYText);
@@ -88,7 +112,10 @@
 			Name = "Form1";
 			Text = "Form1";
 			MouseClick += Form1_MouseClick;
+			MouseDown += Form1_MouseDown;
 			MouseMove += Form1_MouseMove;
+			MouseUp += Form1_MouseUp;
+			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -100,5 +127,7 @@
 		private Label labelYText;
 		private Label labelXValue;
 		private Label labelYvalue;
+		private NumericUpDown numericUpDown1;
+		private Label label2;
 	}
 }
